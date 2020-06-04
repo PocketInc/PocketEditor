@@ -2,8 +2,23 @@
 An open-sourced html-based editor that supports most popular languages.
 Will support Windows, Mac, and Linux.
 
+This project is currently in development.
+
 &copy; CopyRight 2020 Pocket, Inc.
 
-License: MIT
+License: <b>MIT</b>
 <hr>
-More info soon.
+
+<h2>How to run?</h2>
+
+You can run the built version of the editor in <a href="https://github.com/PocketInc/PocketEditor/releases">Releases</a>
+
+To run from source:
+
+ <ol>
+  <li>Clone or Download ZIP.</li>
+  <li>Open Command Prompt / Terminal in folder and run <b>npm install</b></li>
+  <li>When done, run <b>npm start</b></li>
+</ol>
+
+More info soon..
