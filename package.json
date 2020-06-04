@@ -1,0 +1,28 @@
+{
+  "name": "pocket-editor",
+  "version": "1.0.0",
+  "description": "An open-sourced code editor. uses ElectronJS.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PocketInc/PocketEditor.git"
+  },
+  "keywords": [
+    "Code"
+  ],
+  "author": "Pocket, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PocketInc/PocketEditor/issues"
+  },
+  "homepage": "https://github.com/PocketInc/PocketEditor#readme",
+  "dependencies": {
+    "dialog": "^0.3.1",
+    "electron": "^9.0.0",
+    "fs": "0.0.1-security",
+    "remote": "^0.2.6"
+  }
+}

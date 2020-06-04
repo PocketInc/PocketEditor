@@ -1,0 +1,12 @@
+.toolbar {
+    width:100%;
+    height:10%;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+.text {
+    width: 100%;
+    height: 90%;
+    resize: none;
+    border-radius: 10px;
+}

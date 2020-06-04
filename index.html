@@ -1,0 +1,33 @@
+<!--
+    Official Pocket Editor V1 HTML file
+    © CopyRight by Pocket Inc. All Rights Reserved.
+    http://pocket-inc.ml
+    http://github.com/PocketInc
+
+    License: MIT
+
+    Contact: Pocket.Inc.Company@gmail.com
+-->
+<html>
+    <head>
+        <!--Importing stylesheet file-->
+        <link rel="stylesheet" href="style.css">
+        <!--Title of document-->
+        <title>Pocket Editor</title>
+    </head>
+    <!--setting background color to "grey"-->
+    <body bgcolor="grey">
+    
+<!--Importing the read and save file-->
+<script src="read.js"></script>
+<!--ToolBar with save and open buttons that runs functions from read.js-->
+<div class="toolbar">
+<br>
+&nbsp;
+<button onclick="readFile()">Open</button>
+<button onclick="saveFile()">Save</button>
+</div>
+<!--the textarea that holds the readed file texts-->
+<textarea id="file" class="text"></textarea>
+    </body>
+</html>

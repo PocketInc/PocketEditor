@@ -1,0 +1,16 @@
+Credits for libraries and codes used in this project
+==
+
+ElectronJS:
+
+Made this project possible by help making the html file a window/mac/linux app as well as open and save dialogs and much more.
+http://electronjs.org
+
+NodeJS & NPM:
+
+The Node Enviroment and it's package manager.
+
+http://nodejs.org
+http://npmjs.com
+
+HTML, CSS, JS and JSON.
