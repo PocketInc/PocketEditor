@@ -12,7 +12,6 @@
 // Importing electronjs dialog, FS (npm), and dialog modules.
 const { dialog } = require('electron').remote
 const fs = require("fs");
-const nDialog = require("dialog");
 
 //this variable will hold the loaded file path to save at same path.
 var path = "none";
@@ -23,6 +22,7 @@ function readFile() {
     dialog.showOpenDialog({
       properties: ['openFile']
     }).then(result => {
+      if (result.canceled) return;
       //on result.. (when client chooses a file)
 
 
@@ -33,7 +33,8 @@ function readFile() {
   fs.readFile(result.filePaths[0], function (err, data) {
     if (err) {
       // on error, send error dialog.
-      return nDialog.error(err);
+      return dialog.showErrorBox("Error Occured!", err + "\n\nhttp://pocket-inc.ml/support")
+
     }
     // if no error found, change textarea value to file contents.
     document.getElementById("file").value = data.toString();
@@ -42,10 +43,9 @@ function readFile() {
     
   });
   
-  // Synchronous read
-  var data = fs.readFileSync(result.filePaths[0]);
+ 
     }).catch(err => {
-      nDialog.log(err)
+      return dialog.showErrorBox("Error Occured!", err + "\n\nhttp://pocket-inc.ml/support")
     })
   }
   //Save a file function
@@ -58,12 +58,45 @@ function readFile() {
     fs.writeFile(path, data, function(err) {
         if(err) {
           //if error. send error Dialog.
-            nDialog.info("Error! " + err)
+          dialog.showErrorBox("Error Occured!", err + "\n\nhttp://pocket-inc.ml/support")
+
             return console.log(err);
         }
         //otherwise save complete. send to console and Dialog.
         console.log("The file was saved!");
-        nDialog.info('Saved to ' + path);
-    }); 
+        dialog.showMessageBox({title:"Save Successful", message:"File saved to path: " + path,icon:"icon.png"})
+      }); 
+} else {
+  dialog.showSaveDialog({
+    properties: ['openFile']
+  }).then(result => {
+    if (result.canceled) return;
+    var newPath = result.filePath;
+    var data = document.getElementById("file").value;
+    //write to file of saved path
+fs.writeFile(newPath, data, function(err) {
+    if(err) {
+      //if error. send error Dialog.
+      dialog.showErrorBox("Error Occured!", err + "\n\nhttp://pocket-inc.ml/support")
+
+        return console.log(err);
+    }
+    //otherwise save complete. send to console and Dialog.
+    console.log("The file was saved!");
+   dialog.showMessageBox({title:"Save Successful", message:"File saved to path: " + newPath,icon:"icon.png"})
+}); 
+      }).catch(err => {
+        dialog.showErrorBox("Error Occured!", err + "\n\nhttp://pocket-inc.ml/support")
+
+      })
 }
   }
+function newFile() {
+  document.getElementById("file").value = "";
+  path = "none";
+  let myNotification = new Notification('Pocket Editor', {
+    body: 'New File created successfully!',
+    icon: 'icon.ico'
+  })
+  
+}

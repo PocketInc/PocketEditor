@@ -1,0 +1,6 @@
+Update 1.1:
+
+- Added new file creation.
+- Changed dialog module.
+- Added icons.
+- Added build.bat, readme.txt, credits.txt and changelog.txt.

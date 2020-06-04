@@ -9,4 +9,7 @@
     height: 90%;
     resize: none;
     border-radius: 10px;
+    border: 1px solid lightgray;
+    background-color: black;
+    color: lime;
 }

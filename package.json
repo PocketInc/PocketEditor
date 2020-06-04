@@ -1,6 +1,8 @@
 {
   "name": "pocket-editor",
-  "version": "1.0.0",
+  "productName":"Pocket Editor",
+  "version": "1.2.0",
+  "icon": "./icon.ico",
   "description": "An open-sourced code editor. uses ElectronJS.",
   "main": "main.js",
   "scripts": {
@@ -20,7 +22,6 @@
   },
   "homepage": "https://github.com/PocketInc/PocketEditor#readme",
   "dependencies": {
-    "dialog": "^0.3.1",
     "electron": "^9.0.0",
     "fs": "0.0.1-security",
     "remote": "^0.2.6"
