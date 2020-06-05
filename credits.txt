@@ -3,7 +3,7 @@ Credits for libraries and codes used in this project
 
 ElectronJS:
 
-Made this project possible by help making the html file a window/mac/linux app as well as open and save dialogs and much more.
+Made this project possible by help making the html file a window/mac/linux app.
 http://electronjs.org
 
 NodeJS & NPM:
