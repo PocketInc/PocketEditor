@@ -13,12 +13,10 @@ License: <b>MIT</b>
 
 You can run the built version of the editor in <a href="https://github.com/PocketInc/PocketEditor/releases">Releases</a>
 
-To run from source:
+To run from source, please look at the wiki page <a href="https://github.com/PocketInc/PocketEditor/wiki/Setup">Setup</a>
 
- <ol>
-  <li>Clone or Download ZIP.</li>
-  <li>Open Command Prompt / Terminal in folder and run <b>npm install</b></li>
-  <li>When done, run <b>npm start</b></li>
-</ol>
+To build from source, please look at the wiki page <a href="https://github.com/PocketInc/PocketEditor/wiki/Building">Building</a>
+
+
 
 More info soon..
